@@ -12,6 +12,7 @@ public inline fun automaticControlChannelParams(block: cmd.Heater.AutomaticContr
 /**
  * ```
  * AutomaticControlChannelParams contains automatic regulation parameters for a single heater channel
+ * Note: PID gains (kp, ki, kd) are loaded from Redis config_editor, not sent via command
  * ```
  *
  * Protobuf type `cmd.Heater.AutomaticControlChannelParams`
@@ -34,7 +35,7 @@ public object AutomaticControlChannelParamsKt {
 
     /**
      * ```
-     * Target temperature in Celsius
+     * Target temperature in Celsius (persisted via manifold state storage)
      * ```
      *
      * `float target_temperature = 1 [(.buf.validate.field) = { ... }`
@@ -48,88 +49,13 @@ public object AutomaticControlChannelParamsKt {
       }
     /**
      * ```
-     * Target temperature in Celsius
+     * Target temperature in Celsius (persisted via manifold state storage)
      * ```
      *
      * `float target_temperature = 1 [(.buf.validate.field) = { ... }`
      */
     public fun clearTargetTemperature() {
       _builder.clearTargetTemperature()
-    }
-
-    /**
-     * ```
-     * Proportional gain
-     * ```
-     *
-     * `float kp = 2 [(.buf.validate.field) = { ... }`
-     */
-    public var kp: kotlin.Float
-      @JvmName("getKp")
-      get() = _builder.kp
-      @JvmName("setKp")
-      set(value) {
-        _builder.kp = value
-      }
-    /**
-     * ```
-     * Proportional gain
-     * ```
-     *
-     * `float kp = 2 [(.buf.validate.field) = { ... }`
-     */
-    public fun clearKp() {
-      _builder.clearKp()
-    }
-
-    /**
-     * ```
-     * Integral gain
-     * ```
-     *
-     * `float ki = 3 [(.buf.validate.field) = { ... }`
-     */
-    public var ki: kotlin.Float
-      @JvmName("getKi")
-      get() = _builder.ki
-      @JvmName("setKi")
-      set(value) {
-        _builder.ki = value
-      }
-    /**
-     * ```
-     * Integral gain
-     * ```
-     *
-     * `float ki = 3 [(.buf.validate.field) = { ... }`
-     */
-    public fun clearKi() {
-      _builder.clearKi()
-    }
-
-    /**
-     * ```
-     * Derivative gain
-     * ```
-     *
-     * `float kd = 4 [(.buf.validate.field) = { ... }`
-     */
-    public var kd: kotlin.Float
-      @JvmName("getKd")
-      get() = _builder.kd
-      @JvmName("setKd")
-      set(value) {
-        _builder.kd = value
-      }
-    /**
-     * ```
-     * Derivative gain
-     * ```
-     *
-     * `float kd = 4 [(.buf.validate.field) = { ... }`
-     */
-    public fun clearKd() {
-      _builder.clearKd()
     }
   }
 }

@@ -84,6 +84,10 @@ public object JonGuiDataHeaterKt {
     }
 
     /**
+     * ```
+     * Day camera glass (60W)
+     * ```
+     *
      * `.ser.JonGuiDataHeaterChannelStatus channel_0 = 4;`
      */
     public var channel0: ser.JonSharedDataHeater.JonGuiDataHeaterChannelStatus
@@ -94,12 +98,20 @@ public object JonGuiDataHeaterKt {
         _builder.channel0 = value
       }
     /**
+     * ```
+     * Day camera glass (60W)
+     * ```
+     *
      * `.ser.JonGuiDataHeaterChannelStatus channel_0 = 4;`
      */
     public fun clearChannel0() {
       _builder.clearChannel0()
     }
     /**
+     * ```
+     * Day camera glass (60W)
+     * ```
+     *
      * `.ser.JonGuiDataHeaterChannelStatus channel_0 = 4;`
      * @return Whether the channel0 field is set.
      */
@@ -111,6 +123,10 @@ public object JonGuiDataHeaterKt {
       get() = _builder.channel0OrNull
 
     /**
+     * ```
+     * LRF glass (15W)
+     * ```
+     *
      * `.ser.JonGuiDataHeaterChannelStatus channel_1 = 5;`
      */
     public var channel1: ser.JonSharedDataHeater.JonGuiDataHeaterChannelStatus
@@ -121,12 +137,20 @@ public object JonGuiDataHeaterKt {
         _builder.channel1 = value
       }
     /**
+     * ```
+     * LRF glass (15W)
+     * ```
+     *
      * `.ser.JonGuiDataHeaterChannelStatus channel_1 = 5;`
      */
     public fun clearChannel1() {
       _builder.clearChannel1()
     }
     /**
+     * ```
+     * LRF glass (15W)
+     * ```
+     *
      * `.ser.JonGuiDataHeaterChannelStatus channel_1 = 5;`
      * @return Whether the channel1 field is set.
      */
@@ -138,6 +162,10 @@ public object JonGuiDataHeaterKt {
       get() = _builder.channel1OrNull
 
     /**
+     * ```
+     * Heat camera glass (60W)
+     * ```
+     *
      * `.ser.JonGuiDataHeaterChannelStatus channel_2 = 6;`
      */
     public var channel2: ser.JonSharedDataHeater.JonGuiDataHeaterChannelStatus
@@ -148,12 +176,20 @@ public object JonGuiDataHeaterKt {
         _builder.channel2 = value
       }
     /**
+     * ```
+     * Heat camera glass (60W)
+     * ```
+     *
      * `.ser.JonGuiDataHeaterChannelStatus channel_2 = 6;`
      */
     public fun clearChannel2() {
       _builder.clearChannel2()
     }
     /**
+     * ```
+     * Heat camera glass (60W)
+     * ```
+     *
      * `.ser.JonGuiDataHeaterChannelStatus channel_2 = 6;`
      * @return Whether the channel2 field is set.
      */
@@ -179,6 +215,65 @@ public object JonGuiDataHeaterKt {
      */
     public fun clearAutomaticControlEnabled() {
       _builder.clearAutomaticControlEnabled()
+    }
+
+    /**
+     * ```
+     * Target temperatures for PID control (persisted via state storage)
+     * ```
+     *
+     * `float target_temp_channel_0 = 8 [(.buf.validate.field) = { ... }`
+     */
+    public var targetTempChannel0: kotlin.Float
+      @JvmName("getTargetTempChannel0")
+      get() = _builder.targetTempChannel0
+      @JvmName("setTargetTempChannel0")
+      set(value) {
+        _builder.targetTempChannel0 = value
+      }
+    /**
+     * ```
+     * Target temperatures for PID control (persisted via state storage)
+     * ```
+     *
+     * `float target_temp_channel_0 = 8 [(.buf.validate.field) = { ... }`
+     */
+    public fun clearTargetTempChannel0() {
+      _builder.clearTargetTempChannel0()
+    }
+
+    /**
+     * `float target_temp_channel_1 = 9 [(.buf.validate.field) = { ... }`
+     */
+    public var targetTempChannel1: kotlin.Float
+      @JvmName("getTargetTempChannel1")
+      get() = _builder.targetTempChannel1
+      @JvmName("setTargetTempChannel1")
+      set(value) {
+        _builder.targetTempChannel1 = value
+      }
+    /**
+     * `float target_temp_channel_1 = 9 [(.buf.validate.field) = { ... }`
+     */
+    public fun clearTargetTempChannel1() {
+      _builder.clearTargetTempChannel1()
+    }
+
+    /**
+     * `float target_temp_channel_2 = 10 [(.buf.validate.field) = { ... }`
+     */
+    public var targetTempChannel2: kotlin.Float
+      @JvmName("getTargetTempChannel2")
+      get() = _builder.targetTempChannel2
+      @JvmName("setTargetTempChannel2")
+      set(value) {
+        _builder.targetTempChannel2 = value
+      }
+    /**
+     * `float target_temp_channel_2 = 10 [(.buf.validate.field) = { ... }`
+     */
+    public fun clearTargetTempChannel2() {
+      _builder.clearTargetTempChannel2()
     }
   }
 }
