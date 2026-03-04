@@ -10,6 +10,11 @@ package ui;
 public inline fun styleGroup(block: ui.StyleGroupKt.Dsl.() -> kotlin.Unit): ui.UiAst.StyleGroup =
   ui.StyleGroupKt.Dsl._create(ui.UiAst.StyleGroup.newBuilder()).apply { block() }._build()
 /**
+ * ```
+ * A group of style variants for one LVGL state selector.
+ * state_selector encodes LV_PART_MAIN (0x0), LV_PART_MAIN | LV_STATE_PRESSED (0x20), etc.
+ * ```
+ *
  * Protobuf type `ui.StyleGroup`
  */
 public object StyleGroupKt {
@@ -52,6 +57,10 @@ public object StyleGroupKt {
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
     public class VariantsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
     /**
+     * ```
+     * exactly 8 entries (composite indices 0-7)
+     * ```
+     *
      * `repeated .ui.ResolvedStyle variants = 2;`
      */
      public val variants: com.google.protobuf.kotlin.DslList<ui.UiAst.ResolvedStyle, VariantsProxy>
@@ -60,6 +69,10 @@ public object StyleGroupKt {
         _builder.variantsList
       )
     /**
+     * ```
+     * exactly 8 entries (composite indices 0-7)
+     * ```
+     *
      * `repeated .ui.ResolvedStyle variants = 2;`
      * @param value The variants to add.
      */
@@ -69,6 +82,10 @@ public object StyleGroupKt {
       _builder.addVariants(value)
     }
     /**
+     * ```
+     * exactly 8 entries (composite indices 0-7)
+     * ```
+     *
      * `repeated .ui.ResolvedStyle variants = 2;`
      * @param value The variants to add.
      */
@@ -79,6 +96,10 @@ public object StyleGroupKt {
       add(value)
     }
     /**
+     * ```
+     * exactly 8 entries (composite indices 0-7)
+     * ```
+     *
      * `repeated .ui.ResolvedStyle variants = 2;`
      * @param values The variants to add.
      */
@@ -88,6 +109,10 @@ public object StyleGroupKt {
       _builder.addAllVariants(values)
     }
     /**
+     * ```
+     * exactly 8 entries (composite indices 0-7)
+     * ```
+     *
      * `repeated .ui.ResolvedStyle variants = 2;`
      * @param values The variants to add.
      */
@@ -98,6 +123,10 @@ public object StyleGroupKt {
       addAll(values)
     }
     /**
+     * ```
+     * exactly 8 entries (composite indices 0-7)
+     * ```
+     *
      * `repeated .ui.ResolvedStyle variants = 2;`
      * @param index The index to set the value at.
      * @param value The variants to set.
@@ -108,6 +137,10 @@ public object StyleGroupKt {
       _builder.setVariants(index, value)
     }
     /**
+     * ```
+     * exactly 8 entries (composite indices 0-7)
+     * ```
+     *
      * `repeated .ui.ResolvedStyle variants = 2;`
      */
     @kotlin.jvm.JvmSynthetic

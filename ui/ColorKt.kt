@@ -29,6 +29,10 @@ public object ColorKt {
     internal fun _build(): ui.UiAst.Color = _builder.build()
 
     /**
+     * ```
+     * 0-255
+     * ```
+     *
      * `uint32 r = 1;`
      */
     public var r: kotlin.Int
@@ -39,6 +43,10 @@ public object ColorKt {
         _builder.r = value
       }
     /**
+     * ```
+     * 0-255
+     * ```
+     *
      * `uint32 r = 1;`
      */
     public fun clearR() {

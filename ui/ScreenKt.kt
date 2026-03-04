@@ -10,6 +10,10 @@ package ui;
 public inline fun screen(block: ui.ScreenKt.Dsl.() -> kotlin.Unit): ui.UiAst.Screen =
   ui.ScreenKt.Dsl._create(ui.UiAst.Screen.newBuilder()).apply { block() }._build()
 /**
+ * ```
+ * A complete UI screen — root message pushed via controls_load_ui().
+ * ```
+ *
  * Protobuf type `ui.Screen`
  */
 public object ScreenKt {
@@ -29,6 +33,11 @@ public object ScreenKt {
     internal fun _build(): ui.UiAst.Screen = _builder.build()
 
     /**
+     * ```
+     * `optional` is required so nanopb generates `has_root` for presence
+     * checking in proto3 (submessage fields do NOT get `has_*` by default).
+     * ```
+     *
      * `optional .ui.WidgetNode root = 1;`
      */
     public var root: ui.UiAst.WidgetNode
@@ -39,12 +48,22 @@ public object ScreenKt {
         _builder.root = value
       }
     /**
+     * ```
+     * `optional` is required so nanopb generates `has_root` for presence
+     * checking in proto3 (submessage fields do NOT get `has_*` by default).
+     * ```
+     *
      * `optional .ui.WidgetNode root = 1;`
      */
     public fun clearRoot() {
       _builder.clearRoot()
     }
     /**
+     * ```
+     * `optional` is required so nanopb generates `has_root` for presence
+     * checking in proto3 (submessage fields do NOT get `has_*` by default).
+     * ```
+     *
      * `optional .ui.WidgetNode root = 1;`
      * @return Whether the root field is set.
      */
@@ -54,6 +73,106 @@ public object ScreenKt {
 
     public val ScreenKt.Dsl.rootOrNull: ui.UiAst.WidgetNode?
       get() = _builder.rootOrNull
+
+    /**
+     * An uninstantiable, behaviorless type to represent the field in
+     * generics.
+     */
+    @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
+    public class SubjectsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+    /**
+     * ```
+     * reactive subject declarations
+     * ```
+     *
+     * `repeated .ui.SubjectDeclaration subjects = 2;`
+     */
+     public val subjects: com.google.protobuf.kotlin.DslList<ui.UiAst.SubjectDeclaration, SubjectsProxy>
+      @kotlin.jvm.JvmSynthetic
+      get() = com.google.protobuf.kotlin.DslList(
+        _builder.subjectsList
+      )
+    /**
+     * ```
+     * reactive subject declarations
+     * ```
+     *
+     * `repeated .ui.SubjectDeclaration subjects = 2;`
+     * @param value The subjects to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("addSubjects")
+    public fun com.google.protobuf.kotlin.DslList<ui.UiAst.SubjectDeclaration, SubjectsProxy>.add(value: ui.UiAst.SubjectDeclaration) {
+      _builder.addSubjects(value)
+    }
+    /**
+     * ```
+     * reactive subject declarations
+     * ```
+     *
+     * `repeated .ui.SubjectDeclaration subjects = 2;`
+     * @param value The subjects to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("plusAssignSubjects")
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslList<ui.UiAst.SubjectDeclaration, SubjectsProxy>.plusAssign(value: ui.UiAst.SubjectDeclaration) {
+      add(value)
+    }
+    /**
+     * ```
+     * reactive subject declarations
+     * ```
+     *
+     * `repeated .ui.SubjectDeclaration subjects = 2;`
+     * @param values The subjects to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("addAllSubjects")
+    public fun com.google.protobuf.kotlin.DslList<ui.UiAst.SubjectDeclaration, SubjectsProxy>.addAll(values: kotlin.collections.Iterable<ui.UiAst.SubjectDeclaration>) {
+      _builder.addAllSubjects(values)
+    }
+    /**
+     * ```
+     * reactive subject declarations
+     * ```
+     *
+     * `repeated .ui.SubjectDeclaration subjects = 2;`
+     * @param values The subjects to add.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("plusAssignAllSubjects")
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslList<ui.UiAst.SubjectDeclaration, SubjectsProxy>.plusAssign(values: kotlin.collections.Iterable<ui.UiAst.SubjectDeclaration>) {
+      addAll(values)
+    }
+    /**
+     * ```
+     * reactive subject declarations
+     * ```
+     *
+     * `repeated .ui.SubjectDeclaration subjects = 2;`
+     * @param index The index to set the value at.
+     * @param value The subjects to set.
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("setSubjects")
+    public operator fun com.google.protobuf.kotlin.DslList<ui.UiAst.SubjectDeclaration, SubjectsProxy>.set(index: kotlin.Int, value: ui.UiAst.SubjectDeclaration) {
+      _builder.setSubjects(index, value)
+    }
+    /**
+     * ```
+     * reactive subject declarations
+     * ```
+     *
+     * `repeated .ui.SubjectDeclaration subjects = 2;`
+     */
+    @kotlin.jvm.JvmSynthetic
+    @kotlin.jvm.JvmName("clearSubjects")
+    public fun com.google.protobuf.kotlin.DslList<ui.UiAst.SubjectDeclaration, SubjectsProxy>.clear() {
+      _builder.clearSubjects()
+    }
+
   }
 }
 @kotlin.jvm.JvmSynthetic

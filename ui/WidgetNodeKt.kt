@@ -10,6 +10,10 @@ package ui;
 public inline fun widgetNode(block: ui.WidgetNodeKt.Dsl.() -> kotlin.Unit): ui.UiAst.WidgetNode =
   ui.WidgetNodeKt.Dsl._create(ui.UiAst.WidgetNode.newBuilder()).apply { block() }._build()
 /**
+ * ```
+ * A node in the widget tree (recursive).
+ * ```
+ *
  * Protobuf type `ui.WidgetNode`
  */
 public object WidgetNodeKt {
@@ -53,6 +57,10 @@ public object WidgetNodeKt {
     }
 
     /**
+     * ```
+     * Position (optional — 0,0 = use layout)
+     * ```
+     *
      * `int32 x = 2;`
      */
     public var x: kotlin.Int
@@ -63,6 +71,10 @@ public object WidgetNodeKt {
         _builder.x = value
       }
     /**
+     * ```
+     * Position (optional — 0,0 = use layout)
+     * ```
+     *
      * `int32 x = 2;`
      */
     public fun clearX() {
@@ -87,6 +99,10 @@ public object WidgetNodeKt {
     }
 
     /**
+     * ```
+     * Static text (labels, checkbox, textarea, button)
+     * ```
+     *
      * `string text = 4;`
      */
     public var text: kotlin.String
@@ -97,6 +113,10 @@ public object WidgetNodeKt {
         _builder.text = value
       }
     /**
+     * ```
+     * Static text (labels, checkbox, textarea, button)
+     * ```
+     *
      * `string text = 4;`
      */
     public fun clearText() {
@@ -110,6 +130,10 @@ public object WidgetNodeKt {
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
     public class BindingsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
     /**
+     * ```
+     * Subject data bindings (key = LVGL property, value = subject name)
+     * ```
+     *
      * `map<string, string> bindings = 5;`
      */
      public val bindings: com.google.protobuf.kotlin.DslMap<kotlin.String, kotlin.String, BindingsProxy>
@@ -119,6 +143,10 @@ public object WidgetNodeKt {
         _builder.bindingsMap
       )
     /**
+     * ```
+     * Subject data bindings (key = LVGL property, value = subject name)
+     * ```
+     *
      * `map<string, string> bindings = 5;`
      */
     @JvmName("putBindings")
@@ -127,6 +155,10 @@ public object WidgetNodeKt {
          _builder.putBindings(key, value)
        }
     /**
+     * ```
+     * Subject data bindings (key = LVGL property, value = subject name)
+     * ```
+     *
      * `map<string, string> bindings = 5;`
      */
     @kotlin.jvm.JvmSynthetic
@@ -137,6 +169,10 @@ public object WidgetNodeKt {
          put(key, value)
        }
     /**
+     * ```
+     * Subject data bindings (key = LVGL property, value = subject name)
+     * ```
+     *
      * `map<string, string> bindings = 5;`
      */
     @kotlin.jvm.JvmSynthetic
@@ -146,6 +182,10 @@ public object WidgetNodeKt {
          _builder.removeBindings(key)
        }
     /**
+     * ```
+     * Subject data bindings (key = LVGL property, value = subject name)
+     * ```
+     *
      * `map<string, string> bindings = 5;`
      */
     @kotlin.jvm.JvmSynthetic
@@ -155,6 +195,10 @@ public object WidgetNodeKt {
          _builder.putAllBindings(map)
        }
     /**
+     * ```
+     * Subject data bindings (key = LVGL property, value = subject name)
+     * ```
+     *
      * `map<string, string> bindings = 5;`
      */
     @kotlin.jvm.JvmSynthetic
@@ -165,6 +209,10 @@ public object WidgetNodeKt {
        }
 
     /**
+     * ```
+     * Event binding (what command to emit on click)
+     * ```
+     *
      * `.ui.EventBinding event = 6;`
      */
     public var event: ui.UiAst.EventBinding
@@ -175,12 +223,20 @@ public object WidgetNodeKt {
         _builder.event = value
       }
     /**
+     * ```
+     * Event binding (what command to emit on click)
+     * ```
+     *
      * `.ui.EventBinding event = 6;`
      */
     public fun clearEvent() {
       _builder.clearEvent()
     }
     /**
+     * ```
+     * Event binding (what command to emit on click)
+     * ```
+     *
      * `.ui.EventBinding event = 6;`
      * @return Whether the event field is set.
      */
@@ -192,6 +248,10 @@ public object WidgetNodeKt {
       get() = _builder.eventOrNull
 
     /**
+     * ```
+     * Layout flow
+     * ```
+     *
      * `.ui.Layout layout = 7;`
      */
     public var layout: ui.UiAst.Layout
@@ -202,12 +262,20 @@ public object WidgetNodeKt {
         _builder.layout = value
       }
     /**
+     * ```
+     * Layout flow
+     * ```
+     *
      * `.ui.Layout layout = 7;`
      */
     public fun clearLayout() {
       _builder.clearLayout()
     }
     /**
+     * ```
+     * Layout flow
+     * ```
+     *
      * `.ui.Layout layout = 7;`
      * @return Whether the layout field is set.
      */
@@ -225,6 +293,10 @@ public object WidgetNodeKt {
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
     public class ChildrenProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
     /**
+     * ```
+     * Children
+     * ```
+     *
      * `repeated .ui.WidgetNode children = 8;`
      */
      public val children: com.google.protobuf.kotlin.DslList<ui.UiAst.WidgetNode, ChildrenProxy>
@@ -233,6 +305,10 @@ public object WidgetNodeKt {
         _builder.childrenList
       )
     /**
+     * ```
+     * Children
+     * ```
+     *
      * `repeated .ui.WidgetNode children = 8;`
      * @param value The children to add.
      */
@@ -242,6 +318,10 @@ public object WidgetNodeKt {
       _builder.addChildren(value)
     }
     /**
+     * ```
+     * Children
+     * ```
+     *
      * `repeated .ui.WidgetNode children = 8;`
      * @param value The children to add.
      */
@@ -252,6 +332,10 @@ public object WidgetNodeKt {
       add(value)
     }
     /**
+     * ```
+     * Children
+     * ```
+     *
      * `repeated .ui.WidgetNode children = 8;`
      * @param values The children to add.
      */
@@ -261,6 +345,10 @@ public object WidgetNodeKt {
       _builder.addAllChildren(values)
     }
     /**
+     * ```
+     * Children
+     * ```
+     *
      * `repeated .ui.WidgetNode children = 8;`
      * @param values The children to add.
      */
@@ -271,6 +359,10 @@ public object WidgetNodeKt {
       addAll(values)
     }
     /**
+     * ```
+     * Children
+     * ```
+     *
      * `repeated .ui.WidgetNode children = 8;`
      * @param index The index to set the value at.
      * @param value The children to set.
@@ -281,6 +373,10 @@ public object WidgetNodeKt {
       _builder.setChildren(index, value)
     }
     /**
+     * ```
+     * Children
+     * ```
+     *
      * `repeated .ui.WidgetNode children = 8;`
      */
     @kotlin.jvm.JvmSynthetic
@@ -297,6 +393,11 @@ public object WidgetNodeKt {
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
     public class StyleGroupsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
     /**
+     * ```
+     * Style groups: default + per-state, each with 8 composite variants.
+     * Ordered: [default, pressed, focused, disabled, ...]
+     * ```
+     *
      * `repeated .ui.StyleGroup style_groups = 9;`
      */
      public val styleGroups: com.google.protobuf.kotlin.DslList<ui.UiAst.StyleGroup, StyleGroupsProxy>
@@ -305,6 +406,11 @@ public object WidgetNodeKt {
         _builder.styleGroupsList
       )
     /**
+     * ```
+     * Style groups: default + per-state, each with 8 composite variants.
+     * Ordered: [default, pressed, focused, disabled, ...]
+     * ```
+     *
      * `repeated .ui.StyleGroup style_groups = 9;`
      * @param value The styleGroups to add.
      */
@@ -314,6 +420,11 @@ public object WidgetNodeKt {
       _builder.addStyleGroups(value)
     }
     /**
+     * ```
+     * Style groups: default + per-state, each with 8 composite variants.
+     * Ordered: [default, pressed, focused, disabled, ...]
+     * ```
+     *
      * `repeated .ui.StyleGroup style_groups = 9;`
      * @param value The styleGroups to add.
      */
@@ -324,6 +435,11 @@ public object WidgetNodeKt {
       add(value)
     }
     /**
+     * ```
+     * Style groups: default + per-state, each with 8 composite variants.
+     * Ordered: [default, pressed, focused, disabled, ...]
+     * ```
+     *
      * `repeated .ui.StyleGroup style_groups = 9;`
      * @param values The styleGroups to add.
      */
@@ -333,6 +449,11 @@ public object WidgetNodeKt {
       _builder.addAllStyleGroups(values)
     }
     /**
+     * ```
+     * Style groups: default + per-state, each with 8 composite variants.
+     * Ordered: [default, pressed, focused, disabled, ...]
+     * ```
+     *
      * `repeated .ui.StyleGroup style_groups = 9;`
      * @param values The styleGroups to add.
      */
@@ -343,6 +464,11 @@ public object WidgetNodeKt {
       addAll(values)
     }
     /**
+     * ```
+     * Style groups: default + per-state, each with 8 composite variants.
+     * Ordered: [default, pressed, focused, disabled, ...]
+     * ```
+     *
      * `repeated .ui.StyleGroup style_groups = 9;`
      * @param index The index to set the value at.
      * @param value The styleGroups to set.
@@ -353,6 +479,11 @@ public object WidgetNodeKt {
       _builder.setStyleGroups(index, value)
     }
     /**
+     * ```
+     * Style groups: default + per-state, each with 8 composite variants.
+     * Ordered: [default, pressed, focused, disabled, ...]
+     * ```
+     *
      * `repeated .ui.StyleGroup style_groups = 9;`
      */
     @kotlin.jvm.JvmSynthetic
@@ -361,6 +492,593 @@ public object WidgetNodeKt {
       _builder.clearStyleGroups()
     }
 
+
+    /**
+     * `.ui.ObjProps obj_props = 10;`
+     */
+    public var objProps: ui.UiAst.ObjProps
+      @JvmName("getObjProps")
+      get() = _builder.objProps
+      @JvmName("setObjProps")
+      set(value) {
+        _builder.objProps = value
+      }
+    /**
+     * `.ui.ObjProps obj_props = 10;`
+     */
+    public fun clearObjProps() {
+      _builder.clearObjProps()
+    }
+    /**
+     * `.ui.ObjProps obj_props = 10;`
+     * @return Whether the objProps field is set.
+     */
+    public fun hasObjProps(): kotlin.Boolean {
+      return _builder.hasObjProps()
+    }
+
+    /**
+     * `.ui.ButtonProps button_props = 11;`
+     */
+    public var buttonProps: ui.UiAst.ButtonProps
+      @JvmName("getButtonProps")
+      get() = _builder.buttonProps
+      @JvmName("setButtonProps")
+      set(value) {
+        _builder.buttonProps = value
+      }
+    /**
+     * `.ui.ButtonProps button_props = 11;`
+     */
+    public fun clearButtonProps() {
+      _builder.clearButtonProps()
+    }
+    /**
+     * `.ui.ButtonProps button_props = 11;`
+     * @return Whether the buttonProps field is set.
+     */
+    public fun hasButtonProps(): kotlin.Boolean {
+      return _builder.hasButtonProps()
+    }
+
+    /**
+     * `.ui.LabelProps label_props = 12;`
+     */
+    public var labelProps: ui.UiAst.LabelProps
+      @JvmName("getLabelProps")
+      get() = _builder.labelProps
+      @JvmName("setLabelProps")
+      set(value) {
+        _builder.labelProps = value
+      }
+    /**
+     * `.ui.LabelProps label_props = 12;`
+     */
+    public fun clearLabelProps() {
+      _builder.clearLabelProps()
+    }
+    /**
+     * `.ui.LabelProps label_props = 12;`
+     * @return Whether the labelProps field is set.
+     */
+    public fun hasLabelProps(): kotlin.Boolean {
+      return _builder.hasLabelProps()
+    }
+
+    /**
+     * `.ui.SliderProps slider_props = 13;`
+     */
+    public var sliderProps: ui.UiAst.SliderProps
+      @JvmName("getSliderProps")
+      get() = _builder.sliderProps
+      @JvmName("setSliderProps")
+      set(value) {
+        _builder.sliderProps = value
+      }
+    /**
+     * `.ui.SliderProps slider_props = 13;`
+     */
+    public fun clearSliderProps() {
+      _builder.clearSliderProps()
+    }
+    /**
+     * `.ui.SliderProps slider_props = 13;`
+     * @return Whether the sliderProps field is set.
+     */
+    public fun hasSliderProps(): kotlin.Boolean {
+      return _builder.hasSliderProps()
+    }
+
+    /**
+     * `.ui.ImageProps image_props = 14;`
+     */
+    public var imageProps: ui.UiAst.ImageProps
+      @JvmName("getImageProps")
+      get() = _builder.imageProps
+      @JvmName("setImageProps")
+      set(value) {
+        _builder.imageProps = value
+      }
+    /**
+     * `.ui.ImageProps image_props = 14;`
+     */
+    public fun clearImageProps() {
+      _builder.clearImageProps()
+    }
+    /**
+     * `.ui.ImageProps image_props = 14;`
+     * @return Whether the imageProps field is set.
+     */
+    public fun hasImageProps(): kotlin.Boolean {
+      return _builder.hasImageProps()
+    }
+
+    /**
+     * `.ui.ArcProps arc_props = 15;`
+     */
+    public var arcProps: ui.UiAst.ArcProps
+      @JvmName("getArcProps")
+      get() = _builder.arcProps
+      @JvmName("setArcProps")
+      set(value) {
+        _builder.arcProps = value
+      }
+    /**
+     * `.ui.ArcProps arc_props = 15;`
+     */
+    public fun clearArcProps() {
+      _builder.clearArcProps()
+    }
+    /**
+     * `.ui.ArcProps arc_props = 15;`
+     * @return Whether the arcProps field is set.
+     */
+    public fun hasArcProps(): kotlin.Boolean {
+      return _builder.hasArcProps()
+    }
+
+    /**
+     * `.ui.BarProps bar_props = 16;`
+     */
+    public var barProps: ui.UiAst.BarProps
+      @JvmName("getBarProps")
+      get() = _builder.barProps
+      @JvmName("setBarProps")
+      set(value) {
+        _builder.barProps = value
+      }
+    /**
+     * `.ui.BarProps bar_props = 16;`
+     */
+    public fun clearBarProps() {
+      _builder.clearBarProps()
+    }
+    /**
+     * `.ui.BarProps bar_props = 16;`
+     * @return Whether the barProps field is set.
+     */
+    public fun hasBarProps(): kotlin.Boolean {
+      return _builder.hasBarProps()
+    }
+
+    /**
+     * `.ui.SwitchProps switch_props = 17;`
+     */
+    public var switchProps: ui.UiAst.SwitchProps
+      @JvmName("getSwitchProps")
+      get() = _builder.switchProps
+      @JvmName("setSwitchProps")
+      set(value) {
+        _builder.switchProps = value
+      }
+    /**
+     * `.ui.SwitchProps switch_props = 17;`
+     */
+    public fun clearSwitchProps() {
+      _builder.clearSwitchProps()
+    }
+    /**
+     * `.ui.SwitchProps switch_props = 17;`
+     * @return Whether the switchProps field is set.
+     */
+    public fun hasSwitchProps(): kotlin.Boolean {
+      return _builder.hasSwitchProps()
+    }
+
+    /**
+     * `.ui.CheckboxProps checkbox_props = 18;`
+     */
+    public var checkboxProps: ui.UiAst.CheckboxProps
+      @JvmName("getCheckboxProps")
+      get() = _builder.checkboxProps
+      @JvmName("setCheckboxProps")
+      set(value) {
+        _builder.checkboxProps = value
+      }
+    /**
+     * `.ui.CheckboxProps checkbox_props = 18;`
+     */
+    public fun clearCheckboxProps() {
+      _builder.clearCheckboxProps()
+    }
+    /**
+     * `.ui.CheckboxProps checkbox_props = 18;`
+     * @return Whether the checkboxProps field is set.
+     */
+    public fun hasCheckboxProps(): kotlin.Boolean {
+      return _builder.hasCheckboxProps()
+    }
+
+    /**
+     * `.ui.DropdownProps dropdown_props = 19;`
+     */
+    public var dropdownProps: ui.UiAst.DropdownProps
+      @JvmName("getDropdownProps")
+      get() = _builder.dropdownProps
+      @JvmName("setDropdownProps")
+      set(value) {
+        _builder.dropdownProps = value
+      }
+    /**
+     * `.ui.DropdownProps dropdown_props = 19;`
+     */
+    public fun clearDropdownProps() {
+      _builder.clearDropdownProps()
+    }
+    /**
+     * `.ui.DropdownProps dropdown_props = 19;`
+     * @return Whether the dropdownProps field is set.
+     */
+    public fun hasDropdownProps(): kotlin.Boolean {
+      return _builder.hasDropdownProps()
+    }
+
+    /**
+     * `.ui.RollerProps roller_props = 20;`
+     */
+    public var rollerProps: ui.UiAst.RollerProps
+      @JvmName("getRollerProps")
+      get() = _builder.rollerProps
+      @JvmName("setRollerProps")
+      set(value) {
+        _builder.rollerProps = value
+      }
+    /**
+     * `.ui.RollerProps roller_props = 20;`
+     */
+    public fun clearRollerProps() {
+      _builder.clearRollerProps()
+    }
+    /**
+     * `.ui.RollerProps roller_props = 20;`
+     * @return Whether the rollerProps field is set.
+     */
+    public fun hasRollerProps(): kotlin.Boolean {
+      return _builder.hasRollerProps()
+    }
+
+    /**
+     * `.ui.TextareaProps textarea_props = 21;`
+     */
+    public var textareaProps: ui.UiAst.TextareaProps
+      @JvmName("getTextareaProps")
+      get() = _builder.textareaProps
+      @JvmName("setTextareaProps")
+      set(value) {
+        _builder.textareaProps = value
+      }
+    /**
+     * `.ui.TextareaProps textarea_props = 21;`
+     */
+    public fun clearTextareaProps() {
+      _builder.clearTextareaProps()
+    }
+    /**
+     * `.ui.TextareaProps textarea_props = 21;`
+     * @return Whether the textareaProps field is set.
+     */
+    public fun hasTextareaProps(): kotlin.Boolean {
+      return _builder.hasTextareaProps()
+    }
+
+    /**
+     * `.ui.SpinboxProps spinbox_props = 22;`
+     */
+    public var spinboxProps: ui.UiAst.SpinboxProps
+      @JvmName("getSpinboxProps")
+      get() = _builder.spinboxProps
+      @JvmName("setSpinboxProps")
+      set(value) {
+        _builder.spinboxProps = value
+      }
+    /**
+     * `.ui.SpinboxProps spinbox_props = 22;`
+     */
+    public fun clearSpinboxProps() {
+      _builder.clearSpinboxProps()
+    }
+    /**
+     * `.ui.SpinboxProps spinbox_props = 22;`
+     * @return Whether the spinboxProps field is set.
+     */
+    public fun hasSpinboxProps(): kotlin.Boolean {
+      return _builder.hasSpinboxProps()
+    }
+
+    /**
+     * `.ui.SpinnerProps spinner_props = 23;`
+     */
+    public var spinnerProps: ui.UiAst.SpinnerProps
+      @JvmName("getSpinnerProps")
+      get() = _builder.spinnerProps
+      @JvmName("setSpinnerProps")
+      set(value) {
+        _builder.spinnerProps = value
+      }
+    /**
+     * `.ui.SpinnerProps spinner_props = 23;`
+     */
+    public fun clearSpinnerProps() {
+      _builder.clearSpinnerProps()
+    }
+    /**
+     * `.ui.SpinnerProps spinner_props = 23;`
+     * @return Whether the spinnerProps field is set.
+     */
+    public fun hasSpinnerProps(): kotlin.Boolean {
+      return _builder.hasSpinnerProps()
+    }
+
+    /**
+     * `.ui.LedProps led_props = 24;`
+     */
+    public var ledProps: ui.UiAst.LedProps
+      @JvmName("getLedProps")
+      get() = _builder.ledProps
+      @JvmName("setLedProps")
+      set(value) {
+        _builder.ledProps = value
+      }
+    /**
+     * `.ui.LedProps led_props = 24;`
+     */
+    public fun clearLedProps() {
+      _builder.clearLedProps()
+    }
+    /**
+     * `.ui.LedProps led_props = 24;`
+     * @return Whether the ledProps field is set.
+     */
+    public fun hasLedProps(): kotlin.Boolean {
+      return _builder.hasLedProps()
+    }
+
+    /**
+     * `.ui.LineProps line_props = 25;`
+     */
+    public var lineProps: ui.UiAst.LineProps
+      @JvmName("getLineProps")
+      get() = _builder.lineProps
+      @JvmName("setLineProps")
+      set(value) {
+        _builder.lineProps = value
+      }
+    /**
+     * `.ui.LineProps line_props = 25;`
+     */
+    public fun clearLineProps() {
+      _builder.clearLineProps()
+    }
+    /**
+     * `.ui.LineProps line_props = 25;`
+     * @return Whether the lineProps field is set.
+     */
+    public fun hasLineProps(): kotlin.Boolean {
+      return _builder.hasLineProps()
+    }
+
+    /**
+     * `.ui.ScaleProps scale_props = 26;`
+     */
+    public var scaleProps: ui.UiAst.ScaleProps
+      @JvmName("getScaleProps")
+      get() = _builder.scaleProps
+      @JvmName("setScaleProps")
+      set(value) {
+        _builder.scaleProps = value
+      }
+    /**
+     * `.ui.ScaleProps scale_props = 26;`
+     */
+    public fun clearScaleProps() {
+      _builder.clearScaleProps()
+    }
+    /**
+     * `.ui.ScaleProps scale_props = 26;`
+     * @return Whether the scaleProps field is set.
+     */
+    public fun hasScaleProps(): kotlin.Boolean {
+      return _builder.hasScaleProps()
+    }
+
+    /**
+     * `.ui.ButtonMatrixProps buttonmatrix_props = 27;`
+     */
+    public var buttonmatrixProps: ui.UiAst.ButtonMatrixProps
+      @JvmName("getButtonmatrixProps")
+      get() = _builder.buttonmatrixProps
+      @JvmName("setButtonmatrixProps")
+      set(value) {
+        _builder.buttonmatrixProps = value
+      }
+    /**
+     * `.ui.ButtonMatrixProps buttonmatrix_props = 27;`
+     */
+    public fun clearButtonmatrixProps() {
+      _builder.clearButtonmatrixProps()
+    }
+    /**
+     * `.ui.ButtonMatrixProps buttonmatrix_props = 27;`
+     * @return Whether the buttonmatrixProps field is set.
+     */
+    public fun hasButtonmatrixProps(): kotlin.Boolean {
+      return _builder.hasButtonmatrixProps()
+    }
+
+    /**
+     * `.ui.TableProps table_props = 28;`
+     */
+    public var tableProps: ui.UiAst.TableProps
+      @JvmName("getTableProps")
+      get() = _builder.tableProps
+      @JvmName("setTableProps")
+      set(value) {
+        _builder.tableProps = value
+      }
+    /**
+     * `.ui.TableProps table_props = 28;`
+     */
+    public fun clearTableProps() {
+      _builder.clearTableProps()
+    }
+    /**
+     * `.ui.TableProps table_props = 28;`
+     * @return Whether the tableProps field is set.
+     */
+    public fun hasTableProps(): kotlin.Boolean {
+      return _builder.hasTableProps()
+    }
+
+    /**
+     * ```
+     * Conditional visibility binding (show/hide based on subject value)
+     * ```
+     *
+     * `.ui.VisibilityBinding visibility = 29;`
+     */
+    public var visibility: ui.UiAst.VisibilityBinding
+      @JvmName("getVisibility")
+      get() = _builder.visibility
+      @JvmName("setVisibility")
+      set(value) {
+        _builder.visibility = value
+      }
+    /**
+     * ```
+     * Conditional visibility binding (show/hide based on subject value)
+     * ```
+     *
+     * `.ui.VisibilityBinding visibility = 29;`
+     */
+    public fun clearVisibility() {
+      _builder.clearVisibility()
+    }
+    /**
+     * ```
+     * Conditional visibility binding (show/hide based on subject value)
+     * ```
+     *
+     * `.ui.VisibilityBinding visibility = 29;`
+     * @return Whether the visibility field is set.
+     */
+    public fun hasVisibility(): kotlin.Boolean {
+      return _builder.hasVisibility()
+    }
+
+    public val WidgetNodeKt.Dsl.visibilityOrNull: ui.UiAst.VisibilityBinding?
+      get() = _builder.visibilityOrNull
+
+    /**
+     * An uninstantiable, behaviorless type to represent the field in
+     * generics.
+     */
+    @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
+    public class BindFormatsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+    /**
+     * ```
+     * Format strings for bound text (key = binding key, value = printf format)
+     * ```
+     *
+     * `map<string, string> bind_formats = 30;`
+     */
+     public val bindFormats: com.google.protobuf.kotlin.DslMap<kotlin.String, kotlin.String, BindFormatsProxy>
+      @kotlin.jvm.JvmSynthetic
+      @JvmName("getBindFormatsMap")
+      get() = com.google.protobuf.kotlin.DslMap(
+        _builder.bindFormatsMap
+      )
+    /**
+     * ```
+     * Format strings for bound text (key = binding key, value = printf format)
+     * ```
+     *
+     * `map<string, string> bind_formats = 30;`
+     */
+    @JvmName("putBindFormats")
+    public fun com.google.protobuf.kotlin.DslMap<kotlin.String, kotlin.String, BindFormatsProxy>
+      .put(key: kotlin.String, value: kotlin.String) {
+         _builder.putBindFormats(key, value)
+       }
+    /**
+     * ```
+     * Format strings for bound text (key = binding key, value = printf format)
+     * ```
+     *
+     * `map<string, string> bind_formats = 30;`
+     */
+    @kotlin.jvm.JvmSynthetic
+    @JvmName("setBindFormats")
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslMap<kotlin.String, kotlin.String, BindFormatsProxy>
+      .set(key: kotlin.String, value: kotlin.String) {
+         put(key, value)
+       }
+    /**
+     * ```
+     * Format strings for bound text (key = binding key, value = printf format)
+     * ```
+     *
+     * `map<string, string> bind_formats = 30;`
+     */
+    @kotlin.jvm.JvmSynthetic
+    @JvmName("removeBindFormats")
+    public fun com.google.protobuf.kotlin.DslMap<kotlin.String, kotlin.String, BindFormatsProxy>
+      .remove(key: kotlin.String) {
+         _builder.removeBindFormats(key)
+       }
+    /**
+     * ```
+     * Format strings for bound text (key = binding key, value = printf format)
+     * ```
+     *
+     * `map<string, string> bind_formats = 30;`
+     */
+    @kotlin.jvm.JvmSynthetic
+    @JvmName("putAllBindFormats")
+    public fun com.google.protobuf.kotlin.DslMap<kotlin.String, kotlin.String, BindFormatsProxy>
+      .putAll(map: kotlin.collections.Map<kotlin.String, kotlin.String>) {
+         _builder.putAllBindFormats(map)
+       }
+    /**
+     * ```
+     * Format strings for bound text (key = binding key, value = printf format)
+     * ```
+     *
+     * `map<string, string> bind_formats = 30;`
+     */
+    @kotlin.jvm.JvmSynthetic
+    @JvmName("clearBindFormats")
+    public fun com.google.protobuf.kotlin.DslMap<kotlin.String, kotlin.String, BindFormatsProxy>
+      .clear() {
+         _builder.clearBindFormats()
+       }
+    public val widgetPropsCase: ui.UiAst.WidgetNode.WidgetPropsCase
+    @kotlin.jvm.JvmName("getWidgetPropsCase")
+      get() = _builder.getWidgetPropsCase()
+
+    public fun clearWidgetProps() {
+      _builder.clearWidgetProps()
+    }
   }
 }
 @kotlin.jvm.JvmSynthetic
@@ -372,4 +1090,64 @@ public val ui.UiAst.WidgetNodeOrBuilder.eventOrNull: ui.UiAst.EventBinding?
 
 public val ui.UiAst.WidgetNodeOrBuilder.layoutOrNull: ui.UiAst.Layout?
   get() = if (hasLayout()) getLayout() else null
+
+public val ui.UiAst.WidgetNodeOrBuilder.objPropsOrNull: ui.UiAst.ObjProps?
+  get() = if (hasObjProps()) getObjProps() else null
+
+public val ui.UiAst.WidgetNodeOrBuilder.buttonPropsOrNull: ui.UiAst.ButtonProps?
+  get() = if (hasButtonProps()) getButtonProps() else null
+
+public val ui.UiAst.WidgetNodeOrBuilder.labelPropsOrNull: ui.UiAst.LabelProps?
+  get() = if (hasLabelProps()) getLabelProps() else null
+
+public val ui.UiAst.WidgetNodeOrBuilder.sliderPropsOrNull: ui.UiAst.SliderProps?
+  get() = if (hasSliderProps()) getSliderProps() else null
+
+public val ui.UiAst.WidgetNodeOrBuilder.imagePropsOrNull: ui.UiAst.ImageProps?
+  get() = if (hasImageProps()) getImageProps() else null
+
+public val ui.UiAst.WidgetNodeOrBuilder.arcPropsOrNull: ui.UiAst.ArcProps?
+  get() = if (hasArcProps()) getArcProps() else null
+
+public val ui.UiAst.WidgetNodeOrBuilder.barPropsOrNull: ui.UiAst.BarProps?
+  get() = if (hasBarProps()) getBarProps() else null
+
+public val ui.UiAst.WidgetNodeOrBuilder.switchPropsOrNull: ui.UiAst.SwitchProps?
+  get() = if (hasSwitchProps()) getSwitchProps() else null
+
+public val ui.UiAst.WidgetNodeOrBuilder.checkboxPropsOrNull: ui.UiAst.CheckboxProps?
+  get() = if (hasCheckboxProps()) getCheckboxProps() else null
+
+public val ui.UiAst.WidgetNodeOrBuilder.dropdownPropsOrNull: ui.UiAst.DropdownProps?
+  get() = if (hasDropdownProps()) getDropdownProps() else null
+
+public val ui.UiAst.WidgetNodeOrBuilder.rollerPropsOrNull: ui.UiAst.RollerProps?
+  get() = if (hasRollerProps()) getRollerProps() else null
+
+public val ui.UiAst.WidgetNodeOrBuilder.textareaPropsOrNull: ui.UiAst.TextareaProps?
+  get() = if (hasTextareaProps()) getTextareaProps() else null
+
+public val ui.UiAst.WidgetNodeOrBuilder.spinboxPropsOrNull: ui.UiAst.SpinboxProps?
+  get() = if (hasSpinboxProps()) getSpinboxProps() else null
+
+public val ui.UiAst.WidgetNodeOrBuilder.spinnerPropsOrNull: ui.UiAst.SpinnerProps?
+  get() = if (hasSpinnerProps()) getSpinnerProps() else null
+
+public val ui.UiAst.WidgetNodeOrBuilder.ledPropsOrNull: ui.UiAst.LedProps?
+  get() = if (hasLedProps()) getLedProps() else null
+
+public val ui.UiAst.WidgetNodeOrBuilder.linePropsOrNull: ui.UiAst.LineProps?
+  get() = if (hasLineProps()) getLineProps() else null
+
+public val ui.UiAst.WidgetNodeOrBuilder.scalePropsOrNull: ui.UiAst.ScaleProps?
+  get() = if (hasScaleProps()) getScaleProps() else null
+
+public val ui.UiAst.WidgetNodeOrBuilder.buttonmatrixPropsOrNull: ui.UiAst.ButtonMatrixProps?
+  get() = if (hasButtonmatrixProps()) getButtonmatrixProps() else null
+
+public val ui.UiAst.WidgetNodeOrBuilder.tablePropsOrNull: ui.UiAst.TableProps?
+  get() = if (hasTableProps()) getTableProps() else null
+
+public val ui.UiAst.WidgetNodeOrBuilder.visibilityOrNull: ui.UiAst.VisibilityBinding?
+  get() = if (hasVisibility()) getVisibility() else null
 
