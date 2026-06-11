@@ -2,5 +2,5 @@
 
 Auto-generated Kotlin bindings with buf.validate support.
 
-Generated: 2026-06-10 23:18:45 UTC
-Commit: d29cd2d51585e0df20d1b740265cf0f76ea7fe28
+Generated: 2026-06-11 01:23:22 UTC
+Commit: 9bc6ee83e6486d45a0f4c29700085f9b3e65bd3a
