@@ -275,6 +275,66 @@ public object JonGuiDataHeaterKt {
     public fun clearTargetTempChannel2() {
       _builder.clearTargetTempChannel2()
     }
+
+    /**
+     * ```
+     * Control steps the power budget has run without a fresh relayed
+     * whole-system power figure (cmd.Heater.SetSystemPower), counted since the
+     * heater guest started. It stays flat while the relayed figure is fresh, and
+     * while automatic control is off or no device reading has arrived, because
+     * no control step runs then.
+     * ```
+     *
+     * `uint32 budget_unrelayed_steps = 11;`
+     */
+    public var budgetUnrelayedSteps: kotlin.Int
+      @JvmName("getBudgetUnrelayedSteps")
+      get() = _builder.budgetUnrelayedSteps
+      @JvmName("setBudgetUnrelayedSteps")
+      set(value) {
+        _builder.budgetUnrelayedSteps = value
+      }
+    /**
+     * ```
+     * Control steps the power budget has run without a fresh relayed
+     * whole-system power figure (cmd.Heater.SetSystemPower), counted since the
+     * heater guest started. It stays flat while the relayed figure is fresh, and
+     * while automatic control is off or no device reading has arrived, because
+     * no control step runs then.
+     * ```
+     *
+     * `uint32 budget_unrelayed_steps = 11;`
+     */
+    public fun clearBudgetUnrelayedSteps() {
+      _builder.clearBudgetUnrelayedSteps()
+    }
+
+    /**
+     * `.ser.JonGuiDataModuleHealth health = 40;`
+     */
+    public var health: ser.JonSharedDataTypes.JonGuiDataModuleHealth
+      @JvmName("getHealth")
+      get() = _builder.health
+      @JvmName("setHealth")
+      set(value) {
+        _builder.health = value
+      }
+    /**
+     * `.ser.JonGuiDataModuleHealth health = 40;`
+     */
+    public fun clearHealth() {
+      _builder.clearHealth()
+    }
+    /**
+     * `.ser.JonGuiDataModuleHealth health = 40;`
+     * @return Whether the health field is set.
+     */
+    public fun hasHealth(): kotlin.Boolean {
+      return _builder.hasHealth()
+    }
+
+    public val JonGuiDataHeaterKt.Dsl.healthOrNull: ser.JonSharedDataTypes.JonGuiDataModuleHealth?
+      get() = _builder.healthOrNull
   }
 }
 @kotlin.jvm.JvmSynthetic
@@ -289,4 +349,7 @@ public val ser.JonSharedDataHeater.JonGuiDataHeaterOrBuilder.channel1OrNull: ser
 
 public val ser.JonSharedDataHeater.JonGuiDataHeaterOrBuilder.channel2OrNull: ser.JonSharedDataHeater.JonGuiDataHeaterChannelStatus?
   get() = if (hasChannel2()) getChannel2() else null
+
+public val ser.JonSharedDataHeater.JonGuiDataHeaterOrBuilder.healthOrNull: ser.JonSharedDataTypes.JonGuiDataModuleHealth?
+  get() = if (hasHealth()) getHealth() else null
 
